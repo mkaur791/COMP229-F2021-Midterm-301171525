@@ -28,11 +28,6 @@ router.get('/', (req, res, next) => {
 //  GET the Book Details page in order to add a new Book
 router.get('/add', (req, res, next) => {
   res.render('books/details',{title:'Add Book',books:''});
-
-    /*****************
-     * ADD CODE HERE *
-     *****************/
-
 });
 
 // POST process the Book Details page and create a new Book - CREATE
@@ -46,10 +41,17 @@ router.post('/add', (req, res, next) => {
 
 // GET the Book Details page in order to edit an existing Book
 router.get('/:id', (req, res, next) => {
-
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+  let id = req.params.id;
+  book.findById(id, (err,bookToEdit,next) => {
+        if(err){
+            console.log(err);
+            res.end(err);
+        }
+        else{
+            // displaying the edit view with the book data
+            res.render('books/details',{title:'Edit Book',books: bookToEdit});
+        }
+    })
 });
 
 // POST - process the information passed from the details form and update the document
