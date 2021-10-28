@@ -1,4 +1,10 @@
-// moddules for node and express
+/** File name: app.js
+Author Name: Manvir Kaur
+Student Id: 301171525
+Web app name: Favourite Book List 
+*/
+
+// modules for node and express
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');

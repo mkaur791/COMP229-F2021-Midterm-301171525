@@ -1,3 +1,10 @@
+/** File name: books.js
+Author Name: Manvir Kaur
+Student Id: 301171525
+Web app name: Favourite Book List 
+*/
+
+
 // modules required for routing
 let express = require('express');
 let router = express.Router();

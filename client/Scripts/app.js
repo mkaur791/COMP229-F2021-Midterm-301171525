@@ -1,3 +1,9 @@
+/** File name: app.js
+Author Name: Manvir Kaur
+Student Id: 301171525
+Web app name: Favourite Book List 
+*/
+
 /* custom JS goes here */
 
 /* pagination code from http://www.bootply.com/lxa0FF9yhw */

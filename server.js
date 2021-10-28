@@ -1,3 +1,9 @@
+/** File name: server.js
+Author Name: Manvir Kaur
+Student Id: 301171525
+Web app name: Favourite Book List 
+*/
+
 let app = require('./server/config/app');
 let debug = require('debug')('comp308-w2019-midterm:server');
 let http = require('http');
