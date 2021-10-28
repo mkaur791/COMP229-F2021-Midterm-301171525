@@ -10,8 +10,6 @@ let book = require('../models/books');
 router.get('/', (req, res, next) => {
   // find all books in the books collection
   book.find( (err, books) => {
-    console.log("err...",err)
-    console.log("books..",books)
     if (err) {
       return console.error(err);
     }
@@ -32,11 +30,25 @@ router.get('/add', (req, res, next) => {
 
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/add', (req, res, next) => {
+    const {title,price,author,genre} = req.body;
+    let newBook = book({
+      Title: title,
+      Price: price,
+      Author: author,
+      Genre: genre
+    })
 
-    /*****************
-     * ADD CODE HERE *
-     *****************/
-
+    // create a new book
+    book.create(newBook ,(err,req,next)=>{
+        if(err){
+            console.log(err);
+            res.end(err);
+        }
+        else{
+            // refresh the book list
+            res.redirect('/books');
+        }
+    })
 });
 
 // GET the Book Details page in order to edit an existing Book
