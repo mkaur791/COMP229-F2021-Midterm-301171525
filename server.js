@@ -3,6 +3,8 @@ Author Name: Manvir Kaur
 Student Id: 301171525
 Web app name: Favourite Book List 
 */
+const dotenv = require('dotenv');
+dotenv.config();
 
 let app = require('./server/config/app');
 let debug = require('debug')('comp308-w2019-midterm:server');
