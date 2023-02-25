@@ -5,5 +5,6 @@ Web app name: Favourite Book List
 */
 module.exports = {
   // MongoDB Atlas deployment ->
-  "URI": `mongodb+srv://admin:${process.env.DATABASE_PASSWORD}@favouritebooklist.012ee.mongodb.net/${process.env.DATABASE_NAME}?retryWrites=true&w=majority`
+  "URI": `mongodb+srv://${process.env.DATABASE_USER_NAME}:${process.env.DATABASE_PASSWORD}@favouritebooklist.7ppudqw.mongodb.net/${process.env.DATABASE_NAME}?retryWrites=true&w=majority`
 };
+
